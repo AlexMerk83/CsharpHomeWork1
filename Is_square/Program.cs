@@ -26,17 +26,13 @@ if (int.TryParse(Console.ReadLine(), out int taskNo))
     }
     else if (taskNo == 2)
     {
+        string[] dayNames = new String[] {"Monday", "Tuesday", "Wednesday", "Thirsday", "Friday", "Saturday", "Sunday"};
+
         System.Console.WriteLine("Enter number of the day 1..7");
         if (int.TryParse(Console.ReadLine(), out int dayNo))
         {
-            if (dayNo == 1) System.Console.WriteLine("Monday");
-            if (dayNo == 2) System.Console.WriteLine("Tuesday");
-            if (dayNo == 3) System.Console.WriteLine("Wednesday");
-            if (dayNo == 4) System.Console.WriteLine("Thirsday");
-            if (dayNo == 5) System.Console.WriteLine("Friday");
-            if (dayNo == 6) System.Console.WriteLine("Satturday");
-            if (dayNo == 7) System.Console.WriteLine("Sunday");
             if (dayNo < 1 || dayNo > 7) System.Console.WriteLine("There is no such day of the week");
+            else System.Console.WriteLine(dayNames[dayNo-1]);
         }
         else
         {
